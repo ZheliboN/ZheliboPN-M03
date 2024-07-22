@@ -2,13 +2,14 @@
 # 1 обязательно именованный аргумент со значением по умолчанию sender = "university.help@gmail.com".
 def send_email(message, recipient, *, sender= 'university.help@gmail.com'):
     list_domen = ['.com','.ru','.net']
+    index = 0
     index_ = recipient.rfind('.')
     rec_ok = ''
-    if len(recipient)>4:
+    if len(recipient)>3:
         rec_ok = recipient[index_:len(recipient)]
     sen_ok = ''
     index_ = sender.rfind('.')
-    if len(sender)>4:
+    if len(sender)>3:
         sen_ok = sender[index_:len(sender)]
     # Если строки recipient и sender не содержит "@" или не оканчивается на ".com"/".ru"/".net", то вывести на экран(в консоль)
     # строку: "Невозможно отправить письмо с адреса <sender> на адрес <recipient>".
