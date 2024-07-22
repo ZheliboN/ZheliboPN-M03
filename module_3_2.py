@@ -2,7 +2,7 @@
 # 1 обязательно именованный аргумент со значением по умолчанию sender = "university.help@gmail.com".
 def send_email(message, recipient, *, sender= 'university.help@gmail.com'):
     list_domen = ['.com','.ru','.net']
-    index = 0
+    index_ = 0
     index_ = recipient.rfind('.')
     rec_ok = ''
     if len(recipient)>3:
